@@ -25,18 +25,12 @@ Download and manage via [rbenv](https://github.com/rbenv/rbenv) or [RVM](https:/
 
     Clone the repository:
 
-        git clone https://github.com/sunali1/VendingMachine.git
-        cd ./VendingMachine
+        git clone https://github.com/sunali1/vending-machine.git
+        cd ./vending-machine
 
     Install the gems:
 
         bundle install
-
-Start the development server:
-
-    rails s
-
-In your browser open page `localhost:3000`.
 
 ## Tests
 
