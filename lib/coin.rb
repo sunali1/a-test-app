@@ -1,6 +1,6 @@
 class Coin
 
-VALUES_ACCEPTED = [0.01, 0.02, 0.05, 0.10, 0.20, 0.50, 1.00, 2.00]
+VALUES_ACCEPTED = [1, 2, 5, 10, 20, 50, 100, 200]
 
   attr_reader :value
 
