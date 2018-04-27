@@ -11,17 +11,18 @@ module ItemStock
               ]
   end
   def find(item)
-    @stocked_items.find_index{|i| i[0] == item}
-    # p(item)
+    @stocked_items.find_index{|x| x[0] == item}
   end
 
   def select(item)
     @selection = item
-    # p @selection
-    # p @stocked_items
-    # p @stocked_items[find(item)][1]
-        raise "Item out of stock" unless @stocked_items[find(item)][1] > 0
+    p @stocked_items[find(item)][1]
+      raise "Item out of stock" unless @stocked_items[find(item)][1] > 0
     @stocked_items[find(item)][1] -= 1
     return @stocked_items[find(item)][0]
   end
+# # In the real world the vending machine would have a fixed stock to start with
+#   def restock(item, quantity)
+#
+#   end
 end
