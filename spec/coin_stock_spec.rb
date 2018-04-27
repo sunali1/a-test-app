@@ -13,7 +13,7 @@ RSpec.describe CoinStock do
 
   it "stocks coins" do
     @test_coin_stock.restock_coins(200, 10)
-    expect(@test_coin_stock.value).to eq 2000
+    expect(@test_coin_stock.value).to eq 5880
   end
 
 end
