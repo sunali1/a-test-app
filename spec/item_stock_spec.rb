@@ -31,5 +31,10 @@ RSpec.describe ItemStock do
       @test_item_stock.restock("apple", 5)
       expect(@test_item_stock.stocked_items[0][1]).to be 15
     end
+
+    it "keeps track of item quantity" do
+      @test_item_stock.select("apple")
+      expect(@test_item_stock.stocked_items[0][1]).to eq 9
+    end
   end
 end
