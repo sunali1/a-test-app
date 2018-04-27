@@ -4,10 +4,10 @@ module ItemStock
 
   def initialize_item_stock
     @stocked_items = [
-                ["apple", 2, 50],
-                ["tropicana", 2, 200],
-                ["peanuts", 2, 100],
-                ["water", 2, 150]
+                ["apple", 0, 50],
+                ["tropicana", 0, 200],
+                ["peanuts", 0, 100],
+                ["water", 0, 150]
               ]
   end
   def find(item)
@@ -16,13 +16,15 @@ module ItemStock
 
   def select(item)
     @selection = item
-    p @stocked_items[find(item)][1]
       raise "Item out of stock" unless @stocked_items[find(item)][1] > 0
     @stocked_items[find(item)][1] -= 1
     return @stocked_items[find(item)][0]
   end
-# # In the real world the vending machine would have a fixed stock to start with
-#   def restock(item, quantity)
-#
-#   end
+
+  def restock(item, quantity)
+    @stocked_items[find(item)][1] += quantity
+  end
+
+# In the real world the vending machine would have a fixed load and hence can only be restocked by a limited quantity
+
 end
