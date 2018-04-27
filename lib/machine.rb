@@ -1,24 +1,14 @@
-require_relative 'Item'
+require_relative 'item'
+require_relative 'item_stock'
 
 class Machine
 
-attr_reader :capacity, :load, :items
+include ItemStock
 
-  def initialize(capacity=80, load=80)
-    @capacity = capacity
-    @load = load
-    @items = {
-      "apple" => 50,
-      "tropicana" => 200,
-      "peanuts" => 100,
-      "water" => 150
-    }
-  end
-
-  def vend(choice, quantity, paid)
-    item_vended = @items[choice]
-    print item_vended
-
-  end
+def initialize
+  self.initialize_item_stock
+end
 
 end
+# changed Machine class entirely,
+# I found that having a ItemStock module that finds, selects and restocks items would be better separation of concerns and a un-bloated Machine could concentrate on just the vending process. 
