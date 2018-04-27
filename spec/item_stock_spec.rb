@@ -11,6 +11,10 @@ RSpec.describe ItemStock do
     @test_item_stock.initialize_item_stock
   end
 
+    it "raises error when item is out of stock" do
+      expect{@test_item_stock.select("water")}.to raise_error("Item out of stock")
+    end
+
     it "finds index of item chosen by the client from stocked_item array" do
 
       expect(@test_item_stock.find("water")).to eq(3)
@@ -20,6 +24,8 @@ RSpec.describe ItemStock do
       @test_item_stock.restock("tropicana", 10)
       expect(@test_item_stock.select("tropicana")).to eq("tropicana")
     end
+
+
 
   context "when used " do
 
