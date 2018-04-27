@@ -1,30 +1,30 @@
 # README
 
-Vending Machine app.
+## Vending Machine app.
 
 I initially began this project in Rails backend; however found out halfway through I won't be able to finish it in time. So have done it in ruby.
 
-Things I have finished using TDD in Ruby.
+#### Things I have finished using TDD in Ruby.
 
-Machine can be initially loaded with items
-Machine can be reloaded with items
-Machine can vend item chosen by client from the stock
-Machine can keep track of stock of items
-Machine can vend an item
-Machine can be initially loaded with coins
-Machine can be restocked with coins
-Machine accepts coins of denominations 1p, 2p, 5p, 10p, 20p, 50p, £1, £2.
+* Machine can be initially loaded with items.
+* Machine can be reloaded with items.
+* Machine can vend item chosen by client from the stock.
+* Machine can keep track of stock of items.
+* Machine can vend an item
+* Machine can be initially loaded with coins
+* Machine can be restocked with coins
+* Machine accepts coins of denominations 1p, 2p, 5p, 10p, 20p, 50p, £1, £2.
 
 
-Things I have to finish
+#### Things I have to finish
 
-Machine can calculate if amount of money_paid is sufficient
-Machine can return change in coins
-An algorithm to use minimum number of coins to return change
-Machine asks for more money if insufficient money_paid
-Machine keeps track of coins
-A backend api to interact with frontend machine interface
-A frontend (I would ideally use React)
+* Machine can calculate if amount of money_paid is sufficient
+* Machine can return change in coins
+* An algorithm to use minimum number of coins to return change
+* Machine asks for more money if insufficient money_paid
+* Machine keeps track of coins
+* A backend api to interact with frontend machine interface
+* A frontend (I would ideally use React)
 
 
 # Spec
